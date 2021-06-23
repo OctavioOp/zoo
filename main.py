@@ -60,7 +60,16 @@ while True:
         print('-'*40)
     
     elif desition == 5:
-        print('Feeding your animal')
+        print('-'*10,'Feeding your animal','-'*10)
+        name = input('Write the name of an animal to feed it (only created): ')
+        for animal in yourZoo.animals:
+            if name == animal.name:
+                animal.eating(True)
+                print('animal exist...animal feeding')
+            else:
+                animal.eating(False)
+
+
     
     elif desition == 6:
         print('Good bye, all your animals gonna disapear!')
