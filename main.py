@@ -40,9 +40,9 @@ while True:
         name = input()
         print("Insert its age: ")
         age = input()
-        yourZoo.add_Mammal_animal(name,age)
+        yourZoo.add_Mammal_animal(name, age)
         print('animal added!')
-    
+
     elif desition == 3:
         print("Create your new sea animal!!:")
         print("Insert its name: ")
@@ -51,31 +51,27 @@ while True:
         age = input()
         print("Insert its velocity(km/h): ")
         velocity = input()
-        yourZoo.add_Sea_animal(name,age,velocity)
+        yourZoo.add_Sea_animal(name, age, velocity)
         print('animal added!')
-    
+
     elif desition == 4:
-        print('-'*20,'your animals','-'*20)
+        print('-'*20, 'your animals', '-'*20)
         yourZoo.print_info_zoo()
-        print('-'*40)
-    
+        print('-'*50)
+
     elif desition == 5:
-        print('-'*10,'Feeding your animal','-'*10)
+        print('-'*10, 'Feeding your animal', '-'*10)
         name = input('Write the name of an animal to feed it (only created): ')
         for animal in yourZoo.animals:
             if name == animal.name:
-                animal.eating(True)
-                print('animal exist...animal feeding')
-            else:
-                animal.eating(False)
+                print('Would you like to feed it? 1-yes/2-no')
+                subDesition = round(int(input()))
+                if subDesition == 1:
+                    print('Animal fed')
+                    animal.eating(True)
+                elif subDesition == 2:
+                    animal.eating(False)
 
-
-    
     elif desition == 6:
         print('Good bye, all your animals gonna disapear!')
         break
-        
-
-
-
-

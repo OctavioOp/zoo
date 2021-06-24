@@ -15,6 +15,8 @@ class Animal:
             self.happiness += 10
         else:
             print('It will die of hunger')
+            self.lvl_health -= 10
+            self.happiness -= 10
         return self
 
 
@@ -29,6 +31,8 @@ class FlyingAnimal(Animal):
             self.happiness += 30
         else:
             print('It will die of hunger')
+            self.lvl_health -= 10
+            self.happiness -= 10
         return self
 
 
@@ -42,6 +46,8 @@ class MammalsAnimal(Animal):
             self.happiness += 5
         else:
             print('It will die of hunger')
+            self.lvl_health -= 10
+            self.happiness -= 10
         return self
 
     def is_Hunter(self, hunter):
@@ -62,4 +68,6 @@ class SeaAnimal(Animal):
             self.happiness += 45
         else:
             print('It will die of hunger')
+            self.lvl_health -= 10
+            self.happiness -= 10
         return self
